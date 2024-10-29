@@ -30,11 +30,11 @@ jobs:
 
       # 安装依赖
       - name: install dependencies
-        run: npm install
+        run: npm install -F live-platform
 
       # 构建
       - name: build
-        run: npm run build
+        run: npm run build -F live-platform
 
       # 上传服务器
       - name: upload to server
@@ -44,5 +44,5 @@ jobs:
           username: ${{ secrets.SERVER_USER }} # 在 Secrets 中添加你的服务器用户名
           key: ${{ secrets.SSH_PRIVATE_KEY }} # GitHub Secrets 中的 SSH 私钥
           port: 22 # SSH 端口，默认为 22
-          source: "./dist" # 本地文件路径
+          source: "./apps/live-platform/dist" # 本地文件路径
           target: "/home/www" # 服务器上的目标路径
