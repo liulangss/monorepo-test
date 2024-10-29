@@ -40,12 +40,11 @@ jobs:
 
       # 上传服务器
       - name: upload to server
-        working-directory: ./apps/live-platform/
         uses: appleboy/scp-action@master
         with:
           host: ${{ secrets.SERVER_HOST }} # 在 Secrets 中添加你的服务器 IP
           username: ${{ secrets.SERVER_USER }} # 在 Secrets 中添加你的服务器用户名
           key: ${{ secrets.SSH_PRIVATE_KEY }} # GitHub Secrets 中的 SSH 私钥
           port: 22 # SSH 端口，默认为 22
-          source: "./dist" # 本地文件路径
+          source: "./apps/live-platform/dist" # 本地文件路径
           target: "/home/www" # 服务器上的目标路径
