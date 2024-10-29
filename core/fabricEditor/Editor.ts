@@ -1,8 +1,7 @@
-import EventEmitter from 'events';
 // import ContextMenu from './ContextMenu';
 // import ServersPlugin from './plugins/ServersPlugin';
 
-class Editor extends EventEmitter {
+class Editor {
   // public canvas: fabric.Canvas | null = null;
   // [key: string]: any;
   // private pluginMap: {
