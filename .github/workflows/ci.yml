@@ -30,13 +30,11 @@ jobs:
 
       # 安装依赖
       - name: install dependencies
-        working-directory: ./apps/live-platform/
         run: pnpm install
 
       # 构建
       - name: build
-        working-directory: ./apps/live-platform/
-        run: pnpm build
+        run: pnpm -r run build
 
       # 上传服务器
       - name: upload to server
