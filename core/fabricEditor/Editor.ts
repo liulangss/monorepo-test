@@ -1,6 +1,6 @@
 // import ContextMenu from './ContextMenu';
 // import ServersPlugin from './plugins/ServersPlugin';
-
+import hotkeys from 'hotkeys-js';
 class Editor {
   // public canvas: fabric.Canvas | null = null;
   // [key: string]: any;
@@ -155,7 +155,12 @@ class Editor {
 
   destory() {
     console.log("As");
+    hotkeys('a', function (event: any) {
+      //event.srcElement: input
+      //event.target: input
 
+      console.log('you pressed a!')
+    });
     // this.canvas = null;
     // this.pluginMap = {};
     // this.customEvents = [];
