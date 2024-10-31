@@ -30,11 +30,11 @@ jobs:
 
       # 安装依赖
       - name: install dependencies
-        run: pnpm install
+        run: pnpm i
 
       # 构建
       - name: build
-        run: pnpm -r run build
+        run: pnpm run -r build
 
       # 上传服务器
       - name: upload to server
